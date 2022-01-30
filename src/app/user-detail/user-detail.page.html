@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title>user-detail</ion-title>
+
+    <ion-buttons>
+      <ion-icon name="close-circle-outline" color="danger" slot="end" (click)="dismiss()"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+
+
+
+
+
+<ion-item>
+  <ion-label>
+    <p>connexion Method</p>
+    <h2><b>email & {{ method }}</b></h2>
+  </ion-label>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    <p>Identifier</p>
+    <h2><b>{{ userId }}</b></h2>
+  </ion-label>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    <p>Mail Adress</p>
+    <h2><b>{{ mail }}</b></h2>
+  </ion-label>
+</ion-item>
+
+<div class="ion-padding">
+  <ion-button expand="block" color="danger" (click)="logout()">Deconnection</ion-button>
+</div>

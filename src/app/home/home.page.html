@@ -1,28 +1,184 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar color="tertiary">
+
     <ion-title>
-      Gestion de Stock
+      Stock Product Management
     </ion-title>
     <ion-buttons slot="end">
       <ion-button [routerLink]="['/new-product']">
         <ion-icon slot="icon-only" name="add"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+
+<ion-content>
+  <div class="box">
+    <h3>Popular creator rank list</h3>
+
+    <div class="list">
+      <div class="imgBx">
+        <img src="../../assets/icon/tomato.ico" alt="">
+      </div>
+      <div class="content">
+        <h2 class="rank"><small>#</small>1</h2>
+        <h5>Tomato</h5>
+        <p>
+          <ion-button [routerLink]="['/detail-product', p.reference]">
+            <ion-icon name="pricetag" slot="end" color="warning" fill="outline"></ion-icon>
+            <ion-label>{{ p.name }}</ion-label>
+          </ion-button>
+          <ion-button [routerLink]="['/update-product', p.reference]">
+            <ion-icon name="pencil" slot="end" color="warning" fill="outline"></ion-icon>
+          </ion-button>
+          <ion-button style="height: 3em; width: 3em;" [routerLink]="['/delete-product', p.reference]">
+            <!-- <ion-icon name="close" slot="end" color="danger" fill="outline"></ion-icon> -->
+            <img src="../../assets/icon/Delete_64.png" alt="">
+          </ion-button>
+      </p>
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="imgBx">
+        <img src="../../assets/icon/t-shirt.ico" alt="">
+      </div>
+      <div class="content">
+        <h2 class="rank"><small>#</small>2</h2>
+        <h5>Shirt</h5>
+        <p>
+          <ion-button [routerLink]="['/detail-product', p.reference]">
+            <ion-icon name="pricetag" slot="end" color="warning" fill="outline"></ion-icon>
+            <ion-label>{{ p.name }}</ion-label>
+          </ion-button>
+          <ion-button [routerLink]="['/update-product', p.reference]">
+            <ion-icon name="pencil" slot="end" color="warning" fill="outline"></ion-icon>
+          </ion-button>
+          <ion-button style="height: 3em; width: 3em;" [routerLink]="['/delete-product', p.reference]">
+            <!-- <ion-icon name="close" slot="end" color="danger" fill="outline"></ion-icon> -->
+            <img src="../../assets/icon/Delete_64.png" alt="">
+          </ion-button>
+        </p>
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="imgBx">
+        <img src="../../assets/icon/baguette_bread.ico" alt="">
+      </div>
+      <div class="content">
+        <h2 class="rank"><small>#</small>3</h2>
+        <h5>Bread</h5>
+        <p>
+          <ion-button [routerLink]="['/detail-product', p.reference]">
+            <ion-icon name="pricetag" slot="end" color="warning" fill="outline"></ion-icon>
+            <ion-label>{{ p.name }}</ion-label>
+          </ion-button>
+          <ion-button [routerLink]="['/update-product', p.reference]">
+            <ion-icon name="pencil" slot="end" color="warning" fill="outline"></ion-icon>
+          </ion-button>
+          <ion-button style="height: 3em; width: 3em;" [routerLink]="['/delete-product', p.reference]">
+            <!-- <ion-icon name="close" slot="end" color="danger" fill="outline"></ion-icon> -->
+            <img src="../../assets/icon/Delete_64.png" alt="">
+          </ion-button>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="list">
+      <div class="imgBx">
+        <img src="../../assets/icon/sponge.ico" alt="">
+      </div>
+      <div class="content">
+        <h2 class="rank"><small>#</small>4</h2>
+        <h5>Sponge</h5>
+        <p>
+          <ion-button style="height: 3em; width: 3em;" [routerLink]="['/detail-product', p.reference]">
+            <ion-icon name="pricetag" slot="end" color="warning" fill="outline"></ion-icon>
+            <ion-label>{{ p.name }}</ion-label>
+          </ion-button>
+          <ion-button style="height: 3em; width: 3em;" [routerLink]="['/update-product', p.reference]">
+            <ion-icon name="pencil" slot="end" color="warning" fill="outline"></ion-icon>
+          </ion-button>
+          <ion-button style="height: 3em; width: 3em;" [routerLink]="['/delete-product', p.reference]">
+            <!-- <ion-icon name="close" slot="end" color="danger" fill="outline"></ion-icon> -->
+            <img src="../../assets/icon/Delete_64.png" alt="">
+          </ion-button>
+        </p>
+      </div>
+    </div> 
+
+  </div>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <ion-content [fullscreen]="true">
     <ion-list>
       <ion-item *ngFor="let p of products">
         <ion-button [routerLink]="['/detail-product', p.reference]">
-        <ion-label>{{p.name}}</ion-label>
+          <ion-icon name="pricetag" slot="end" color="warning" fill="outline"></ion-icon>
+          <ion-label>{{ p.name }}</ion-label>
         </ion-button>
+
         <ion-button [routerLink]="['/update-product', p.reference]">
           <ion-icon name="pencil" slot="end" color="warning" fill="outline"></ion-icon>
         </ion-button>
+
         <ion-button [routerLink]="['/delete-product', p.reference]">
           <ion-icon name="close" slot="end" color="danger" fill="outline"></ion-icon>
         </ion-button>
+
       </ion-item>
     </ion-list>
-</ion-content>
+</ion-content> -->
+
+
+
+<!-- <ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-item *ngFor="let p of products">
+
+      <ion-button [routerLink]="['/detail-product', p.reference]">
+      <ion-label>{{p.name}}</ion-label>
+      </ion-button>
+
+      <ion-item slot="end">
+
+        <ion-button [routerLink]="['/update-product', p.reference]">
+          <ion-icon name="pencil" slot="end" color="warning" fill="outline"></ion-icon>
+        </ion-button>
+
+        <ion-button (click)="remove(p.id)">
+          <ion-icon name="close" slot="end" color="danger" fill="outline"></ion-icon>
+        </ion-button>
+        
+      </ion-item>
+
+    </ion-item>
+  </ion-list>
+</ion-content> -->
+
+
+
+Get yourself at the left menu to log yourself out
+

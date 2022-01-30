@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar><br>
+    <img src="../../assets/icon/google_tag_manager.ico" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="wrapper">
+    <h3>Sign In</h3>
+    <ion-item lines="none">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input required type="text" placeholder="Enter your email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input required type="text" placeholder="Enter your password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="signin()">Sign In</ion-button>
+  </div>
+
+
+  <!-- <ion-item>
+    <ion-label><b>Email</b></ion-label>
+    <ion-input [(ngModel)]="loginData.email" placeholder="Entrez votre email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label><b>Mot de passe</b></ion-label>
+    <ion-input [(ngModel)]="loginData.password" type="password" placeholder="Entrez votre mot de passe"></ion-input>
+  </ion-item>
+
+  <div class="ion-padding">
+    <ion-button (click)="logIn()" expand="block" color="primary">Connexion</ion-button>
+
+    <p style="text-align: center;">ou</p>
+
+    <ion-button (click)="signUp()" expand="block" color="tertiary">Inscription</ion-button>
+  </div> -->
+</ion-content>
+
+<ion-footer>
+  <div class="text" (click)="gotosignup()">
+    Create an Account Instead
+  </div>
+</ion-footer>
